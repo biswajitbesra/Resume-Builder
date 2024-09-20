@@ -57,8 +57,8 @@ export default function Form() {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    
-    const compId = useSelector( state => state.selectedCompId)
+
+    const compId = useSelector(state => state.selectedCompId)
     const submitHandler = (e) => {
         e.preventDefault()
         dispatch(addPersonalData(formData.personalData))
@@ -329,20 +329,21 @@ export default function Form() {
                         <label htmlFor="hobbies">Hobbies</label>
                         <div className='flex gap-4'>
 
-                        <input
-                            type="text"
-                            id="hobbies"
-                            className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none w-cus-44'
-                            value={hobby}
-                            onChange={(e) => setHobby(e.target.value)}
-                        />
-                        <button
-                            className='w-16 bg-gray-200 rounded-lg'
-                        onClick={(e) => {
-                            e.preventDefault();
-                            setFormData({ ...formData, personalData: { ...formData.personalData, hobbies: [...formData.personalData.hobbies, hobby] } });
-                            setHobby("") }}
-                        >Save</button>
+                            <input
+                                type="text"
+                                id="hobbies"
+                                className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none w-cus-44'
+                                value={hobby}
+                                onChange={(e) => setHobby(e.target.value)}
+                            />
+                            <button
+                                className='w-16 bg-gray-200 rounded-lg'
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setFormData({ ...formData, personalData: { ...formData.personalData, hobbies: [...formData.personalData.hobbies, hobby] } });
+                                    setHobby("")
+                                }}
+                            >Save</button>
                         </div>
 
                         <div className='flex flex-wrap gap-1 w-cus-49'>

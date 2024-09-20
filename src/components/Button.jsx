@@ -16,11 +16,11 @@ export default function Button() {
         <>
             <div className='flex flex-col items-center justify-center gap-10 h-screen w-screen'>
                 <div className='flex gap-5'>
-                    <div className='w-56 h-72 border hover:shadow-lg hover:cursor-pointer border-slate-900'>
-                        <img className='h-full w-full' src={Image1} alt=""onClick={() => setSelectedComp(1)} />
+                    <div className={`w-56 h-72 border hover:shadow-lg hover:cursor-pointer ${selectedComp === 1 ? 'border-slate-800' : ''}`}>
+                        <img className='h-full w-full' src={Image1} alt="" onClick={() => setSelectedComp(1)} />
                     </div>
-                    <div className='w-56 h-72 border hover:shadow-lg hover:cursor-pointer border-slate-900'>
-                        <img className='h-full w-full' src={Image2} alt=""onClick={() => setSelectedComp(2)} />
+                    <div className={`w-56 h-72 border hover:shadow-lg hover:cursor-pointer ${selectedComp === 2 ? 'border-slate-800' : ''}`}>
+                        <img className='h-full w-full' src={Image2} alt="" onClick={() => setSelectedComp(2)} />
                     </div>
                 </div>
                 <div className="flex justify-center items-center">

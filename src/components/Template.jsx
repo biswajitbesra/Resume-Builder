@@ -1,6 +1,6 @@
-import React,{useRef} from 'react'
+import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
-import {useReactToPrint} from 'react-to-print'
+import { useReactToPrint } from 'react-to-print'
 
 function Template() {
 
@@ -11,10 +11,10 @@ function Template() {
     const internshipData = useSelector(state => state.internshipData);
 
     const contentRef = useRef();
-      
-        const handlePrint = useReactToPrint({
-          content: () => contentRef.current,
-        });
+
+    const handlePrint = useReactToPrint({
+        content: () => contentRef.current,
+    });
 
 
     return (
