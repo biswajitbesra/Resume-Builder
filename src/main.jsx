@@ -21,7 +21,7 @@ const router = createBrowserRouter(
         </Route>
     ),
     {
-        basename: '/resume-builder'  // Add your GitHub repository name here
+        basename: '/resume-builder'
     }
 )
 
