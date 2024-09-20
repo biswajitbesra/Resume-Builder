@@ -19,7 +19,10 @@ const router = createBrowserRouter(
             <Route path='/template/1' element={<Template />} />
             <Route path='/template/2' element={<Template2 />} />
         </Route>
-    )
+    ),
+    {
+        basename: '/resume-builder'  // Add your GitHub repository name here
+    }
 )
 
 createRoot(document.getElementById('root')).render(
