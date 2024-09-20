@@ -11,7 +11,7 @@ export default {
             "cus-44": "44rem"
         },
         height: {
-            "cus-70": "70.2rem"
+            "cus-70": "70rem"
         }
       },
     },
