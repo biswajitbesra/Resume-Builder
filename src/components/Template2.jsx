@@ -21,9 +21,7 @@ const Template2 = () => {
         <div className='flex flex-col items-center py-10 gap-4'>
             <div className="max-w-5xl mx-auto h-cus-70 bg-white shadow-lg rounded-lg" ref={contentRef}>
                 <div className="flex items-start h-full">
-                    {/* Left Column */}
                     <div className="w-1/3 bg-gray-100 h-full p-4 rounded-l-lg">
-                        {/* Profile Image */}
                         <div className="flex justify-center mb-6">
                             <div className="w-32 h-32 rounded-full overflow-hidden">
                                 <img
@@ -34,7 +32,6 @@ const Template2 = () => {
                             </div>
                         </div>
 
-                        {/* Contact Section */}
                         <div className="mb-6">
                             <h2 className="text-lg font-bold bg-gray-800 text-white py-2 px-4 mb-4">
                                 Contact
@@ -48,8 +45,6 @@ const Template2 = () => {
                             </ul>
                         </div>
 
-
-                        {/* Skills Section */}
                         <div className="mb-6">
                             <h2 className="text-lg font-bold bg-gray-800 text-white py-2 px-4 mb-4">
                                 Skills
@@ -60,7 +55,6 @@ const Template2 = () => {
                                         <li className="flex items-center" key={index}>
                                             {skills}
                                         </li>
-
                                     )
                                 )}
                             </ul>
@@ -75,7 +69,6 @@ const Template2 = () => {
                                         <li className="flex items-center" key={index}>
                                             {lang}
                                         </li>
-
                                     )
                                 )}
                             </ul>
@@ -89,9 +82,7 @@ const Template2 = () => {
                         </div>
                     </div>
 
-                    {/* Right Column */}
                     <div className="w-2/3 p-4">
-                        {/* Header Section */}
                         <div className="mb-6 h-32 flex flex-col justify-center">
                             <h1 className="text-5xl font-bold">{personalData.firstName}</h1>
                             <h1 className="text-5xl">{personalData.lastName}</h1>
@@ -102,8 +93,6 @@ const Template2 = () => {
                             <p className='text-sm'>{personalData.summary}</p>
                         </div>
 
-
-                        {/* Education Section */}
                         <div className="mb-6">
                             <h2 className="text-lg font-bold bg-gray-800 text-white py-2 px-4 mb-4">
                                 Education
@@ -118,11 +107,9 @@ const Template2 = () => {
                                         </li>
                                     </ul>
                                 )
-
                             )}
                         </div>
 
-                        {/* Work Experience Section */}
                         <div className="mb-6">
                             <h2 className="text-lg font-bold bg-gray-800 text-white py-2 px-4 mb-4">
                                 Work Experience
