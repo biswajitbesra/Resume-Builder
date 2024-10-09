@@ -37,11 +37,11 @@ const Template2 = () => {
                                 Contact
                             </h2>
                             <ul className="text-gray-700 space-y-2">
-                                <li className='text-sm'>📞 {personalData.phoneNo}</li>
-                                <li className='text-sm'>✉️ {personalData.emailId}</li>
-                                <li className='text-sm'>🌐 {personalData.linkedIn}</li>
-                                <li className='text-sm'>🌐 {personalData.gitHub}</li>
-                                <li className='text-sm'>📍 {personalData.address}</li>
+                                <li className='text-sm'>📞{personalData.phoneNo}</li>
+                                <li className='text-sm'>✉️{personalData.emailId}</li>
+                                <li className='text-sm'>🌐{personalData.linkedIn}</li>
+                                <li className='text-sm'>🌐{personalData.gitHub}</li>
+                                <li className='text-sm'>📍{personalData.address}</li>
                             </ul>
                         </div>
 
