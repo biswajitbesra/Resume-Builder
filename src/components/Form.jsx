@@ -151,14 +151,14 @@ export default function Form() {
     return (
         <form className='flex flex-col items-center p-4 w-full'>
             <h2 className='font-bold text-3xl py-6'>Personal Details</h2>
-            <div className='flex flex-col gap-4'>
-                <div className='flex gap-3'>
+            <div className='flex flex-col gap-4 max-[530px]:w-full'>
+                <div className='flex gap-3 max-[530px]:flex-col'>
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="firstName">First Name</label>
                         <input
                             type="text"
                             id='firstName'
-                            className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none'
+                            className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
                             value={formData.personalData.firstName}
                             onChange={(e) => setFormData({
                                 ...formData, personalData: { ...formData.personalData, firstName: e.target.value }
@@ -171,7 +171,7 @@ export default function Form() {
                         <input
                             type="text"
                             id='lastName'
-                            className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none'
+                            className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
                             value={formData.personalData.lastName}
                             onChange={(e) => setFormData({
                                 ...formData, personalData: { ...formData.personalData, lastName: e.target.value }
@@ -181,13 +181,13 @@ export default function Form() {
                     </div>
                 </div>
 
-                <div className='flex gap-3'>
+                <div className='flex gap-3 max-[530px]:flex-col'>
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="phone">Phone</label>
                         <input
                             type="tel"
                             id='phone'
-                            className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none'
+                            className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
                             value={formData.personalData.phoneNo}
                             onChange={(e) => setFormData({
                                 ...formData, personalData: { ...formData.personalData, phoneNo: e.target.value }
@@ -200,7 +200,7 @@ export default function Form() {
                         <input
                             type="email"
                             id='email'
-                            className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none'
+                            className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
                             value={formData.personalData.emailId}
                             onChange={(e) => setFormData({
                                 ...formData, personalData: { ...formData.personalData, emailId: e.target.value }
@@ -210,13 +210,13 @@ export default function Form() {
                     </div>
                 </div>
 
-                <div className='flex gap-3'>
+                <div className='flex gap-3 max-[530px]:flex-col'>
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="dob">GitHub</label>
                         <input
                             type="text"
                             id="dob"
-                            className='bg-gray-200  w-96 py-2 px-2.5 rounded-lg outline-none'
+                            className='bg-gray-200  w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
                             value={formData.personalData.gitHub}
                             onChange={(e) => setFormData({
                                 ...formData, personalData: { ...formData.personalData, gitHub: e.target.value }
@@ -229,7 +229,7 @@ export default function Form() {
                         <label htmlFor="linkedIn">LinkedIn</label>
                         <input type="text"
                             id='linkedIn'
-                            className='bg-gray-200  w-96 py-2 px-2.5 rounded-lg outline-none'
+                            className='bg-gray-200  w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
                             value={formData.personalData.linkedIn}
                             onChange={
                                 (e) => setFormData({ ...formData, personalData: { ...formData.personalData, linkedIn: e.target.value } })
@@ -242,7 +242,7 @@ export default function Form() {
                     <label htmlFor="address">Address</label>
                     <textarea
                         id='address'
-                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
+                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none max-[860px]:w-cus-41 max-[720px]:w-cus-37 max-[636px]:w-cus-31 max-[530px]:w-full'
                         rows="3"
                         value={formData.personalData.address}
                         onChange={(e) => setFormData({
@@ -252,16 +252,16 @@ export default function Form() {
                     />
                 </div>
 
-                <div className='flex gap-3'>
+                <div className='flex gap-3 max-[530px]:flex-col'>
                     <div className='flex flex-col gap-1'>
                         <label className='mb-1' htmlFor='language'>Languages You know</label>
-                        <select id='language' className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none' onChange={handleLanguage}>
+                        <select id='language' className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none' onChange={handleLanguage}>
                             <option value="select">Select Language</option>
                             {language.map((lang) => (
                                 <option key={lang} > {lang} </option>
                             ))}
                         </select>
-                        <div className='flex flex-wrap gap-1 w-96'>
+                        <div className='flex flex-wrap gap-1 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60  max-[530px]:w-full'>
                             {formData.personalData.language.map(
                                 (selectedLang, index) => (
                                     <span className='text-black text-sm border rounded-3xl ps-3 pe-1.5 py-1 bg-gray-200 flex items-center hover:cursor-default' key={index}>{selectedLang}
@@ -278,7 +278,7 @@ export default function Form() {
 
                     <div className='flex flex-col gap-1'>
                         <label className='mb-1' htmlFor='skills'>Skills</label>
-                        <select id="skills" className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none' onChange={handleSkills}>
+                        <select id="skills" className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none' onChange={handleSkills}>
                             <option value="select">Select Skill</option>
                             {skills.map(
                                 (skill) => (
@@ -286,7 +286,7 @@ export default function Form() {
                                 )
                             )}
                         </select>
-                        <div className='flex flex-wrap gap-1 w-96'>
+                        <div className='flex flex-wrap gap-1 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full'>
                             {formData.personalData.skills.map(
                                 (selectedSkill) => (
                                     <span className='text-black text-sm border rounded-3xl ps-3 pe-1.5 py-1 bg-gray-200 flex items-center hover:cursor-default' key={selectedSkill}>{selectedSkill}
@@ -306,15 +306,16 @@ export default function Form() {
                     <label htmlFor='summary'>Professional Summary</label>
                     <textarea
                         id='summary'
-                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none w-cus-49'
+                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none  max-[860px]:w-cus-41 max-[720px]:w-cus-37 max-[636px]:w-cus-31 max-[530px]:w-full'
                         rows="3"
                         value={formData.personalData.summary}
                         onChange={(e) => setFormData({ ...formData, personalData: { ...formData.personalData, summary: e.target.value } })}
                     />
                 </div>
 
+                <div>
                 {!showHobbiesContent && (
-                    <div className="flex justify-between w-cus-49 border rounded-lg p-7">
+                    <div className="flex justify-between w-cus-49 border rounded-lg p-7 max-[860px]:w-cus-41 max-[720px]:w-cus-37 max-[636px]:w-cus-31 max-[530px]:w-full">
                         <h2 className="text-2xl">Hobbies</h2>
                         <button
                             className="py-0.5 px-4 hover:bg-gray-200 hover:rounded-lg hover:shadow"
@@ -327,17 +328,17 @@ export default function Form() {
                 {showHobbiesContent && (
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="hobbies">Hobbies</label>
-                        <div className='flex gap-4'>
+                        <div className='flex gap-4 max-[530px]:flex-col'>
 
                             <input
                                 type="text"
                                 id="hobbies"
-                                className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none w-cus-44'
+                                className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none w-cus-44 max-[860px]:w-cus-36 max-[720px]:w-cus-32 max-[636px]:w-cus-26 max-[530px]:w-full'
                                 value={hobby}
                                 onChange={(e) => setHobby(e.target.value)}
                             />
                             <button
-                                className='w-16 bg-gray-200 rounded-lg'
+                                className='w-16 py-2 bg-gray-200 rounded-lg'
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setFormData({ ...formData, personalData: { ...formData.personalData, hobbies: [...formData.personalData.hobbies, hobby] } });
@@ -346,7 +347,7 @@ export default function Form() {
                             >Save</button>
                         </div>
 
-                        <div className='flex flex-wrap gap-1 w-cus-49'>
+                        <div className='flex flex-wrap gap-1 w-cus-49 max-[860px]:w-cus-41 max-[720px]:w-cus-37 max-[636px]:w-cus-31 max-[530px]:w-full'>
                             {formData.personalData.hobbies.map(
                                 (data, index) => (
                                     <span className='text-black text-sm border rounded-3xl ps-3 pe-1.5 py-1 bg-gray-200 flex items-center hover:cursor-default' key={index}>{data}
@@ -362,18 +363,19 @@ export default function Form() {
                         </div>
                     </div>
                 )}
+                </div>
             </div>
 
 
             <h2 className='font-bold text-3xl pb-6 pt-8'>Qualification</h2>
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-4 max-[530px]:w-full'>
 
                 <div className='flex flex-col gap-1'>
                     <label htmlFor="colUni">College/University Name</label>
                     <input
                         type="text"
                         id='colUni'
-                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
+                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none max-[530px]:w-full'
                         value={formData.educationalData.college}
                         onChange={(e) => setFormData({
                             ...formData, educationalData: { ...formData.educationalData, college: e.target.value }
@@ -386,7 +388,7 @@ export default function Form() {
                     <input
                         type="text"
                         id='course'
-                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
+                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none max-[530px]:w-full'
                         value={formData.educationalData.course}
                         onChange={(e) => setFormData({
                             ...formData, educationalData: { ...formData.educationalData, course: e.target.value }
@@ -394,13 +396,13 @@ export default function Form() {
                     />
                 </div>
 
-                <div className='flex gap-3'>
+                <div className='flex gap-3 max-[530px]:flex-col'>
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="qualificationStartYear">Start Year</label>
                         <input
                             type="month"
                             id='qualificationStartYear'
-                            className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none'
+                            className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
                             value={formData.educationalData.qualificationStartYear}
                             onChange={(e) => setFormData({
                                 ...formData, educationalData: { ...formData.educationalData, qualificationStartYear: e.target.value }
@@ -413,7 +415,7 @@ export default function Form() {
                         <input
                             type="month"
                             id='qualificationEndYear'
-                            className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none'
+                            className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
                             value={formData.educationalData.qualificationEndYear}
                             onChange={(e) => setFormData({
                                 ...formData, educationalData: { ...formData.educationalData, qualificationEndYear: e.target.value }
@@ -432,277 +434,282 @@ export default function Form() {
                 </div>
             </div>
 
-            {!showProjectContent && (
-                <div className='flex justify-between p-7 mt-4 w-cus-49 border rounded-lg'>
-                    <h2 className='text-2xl'>Project Details</h2>
-                    <button
-                        className="py-0.5 px-4 hover:bg-gray-200 hover:rounded-lg hover:shadow"
-                        onClick={showProject}>
-                        <FontAwesomeIcon icon={faPlus} />
-                    </button>
-                </div>
-            )}
-            {showProjectContent && (
-                <>
-                    <h2 className='font-bold text-3xl pb-6 pt-8'>Project Details</h2>
-                    <div className='flex flex-col gap-4'>
-                        <div className='flex gap-3'>
+            <div className='max-[530px]:w-full'>
+                <div className='max-[530px]:w-full'>
+                    {!showProjectContent && (
+                        <div className='flex justify-between p-7 mt-4 w-cus-49 border rounded-lg max-[860px]:w-cus-41 max-[720px]:w-cus-37 max-[636px]:w-cus-31 max-[530px]:w-full'>
 
-                            <div className='flex flex-col gap-1'>
-                                <label htmlFor="title">Title</label>
-                                <input
-                                    type="text"
-                                    id='title'
-                                    className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none w-96'
-                                    value={formData.projectData.title}
-                                    onChange={(e) => setFormData({
-                                        ...formData, projectData: { ...formData.projectData, title: e.target.value }
-                                    })}
-                                    required
-                                />
-                            </div>
-
-                            <div className='flex flex-col gap-1'>
-                                <label htmlFor="link">Project Link</label>
-                                <input
-                                    type="text"
-                                    id='link'
-                                    className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none w-96'
-                                    value={formData.projectData.link}
-                                    onChange={(e) => setFormData({
-                                        ...formData, projectData: { ...formData.projectData, link: e.target.value }
-                                    })}
-                                    required
-                                />
-                            </div>
+                            <h2 className='text-2xl'>Project Details</h2>
+                            <button
+                                className="py-0.5 px-4 hover:bg-gray-200 hover:rounded-lg hover:shadow"
+                                onClick={showProject}>
+                                <FontAwesomeIcon icon={faPlus} />
+                            </button>
                         </div>
+                    )}
+                    {showProjectContent && (
+                        <>
+                            <h2 className='font-bold text-3xl pb-6 pt-8 text-center'>Project Details</h2>
+                            <div className='flex flex-col gap-4'>
+                                <div className='flex gap-3 max-[530px]:flex-col'>
+                                    <div className='flex flex-col gap-1'>
+                                        <label htmlFor="title">Title</label>
+                                        <input
+                                            type="text"
+                                            id='title'
+                                            className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full'
+                                            value={formData.projectData.title}
+                                            onChange={(e) => setFormData({
+                                                ...formData, projectData: { ...formData.projectData, title: e.target.value }
+                                            })}
+                                            required
+                                        />
+                                    </div>
 
-                        <div className='flex flex-col gap-1'>
-                            <label htmlFor="description">Description</label>
-                            <textarea
-                                name=""
-                                id="description"
-                                rows="4"
-                                className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
-                                value={formData.projectData.description}
-                                onChange={(e) => setFormData({
-                                    ...formData, projectData: { ...formData.projectData, description: e.target.value }
-                                })}
-                            ></textarea>
-                        </div>
+                                    <div className='flex flex-col gap-1'>
+                                        <label htmlFor="link">Project Link</label>
+                                        <input
+                                            type="text"
+                                            id='link'
+                                            className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full'
+                                            value={formData.projectData.link}
+                                            onChange={(e) => setFormData({
+                                                ...formData, projectData: { ...formData.projectData, link: e.target.value }
+                                            })}
+                                            required
+                                        />
+                                    </div>
+                                </div>
 
-                        <div className='flex justify-center'>
-                            <button className='py-2 px-4 shadow rounded-lg bg-gray-200' onClick={addProjectHandler}>Add More</button>
-                        </div>
-                    </div>
-                </>
-            )}
-
-            {!showJobContent && (
-                <div className="flex justify-between w-cus-49 mt-4 border rounded-lg p-7">
-                    <h2 className="text-2xl">Job Details</h2>
-                    <button
-                        className="py-0.5 px-4 hover:bg-gray-200 hover:rounded-lg hover:shadow"
-                        onClick={showJob}
-                    >
-                        <FontAwesomeIcon icon={faPlus} />
-                    </button>
-                </div>
-            )}
-            {showJobContent && (
-                <>
-                    <h2 className='font-bold text-3xl pb-6 pt-8'>Job Details</h2>
-                    <div className='flex flex-col gap-4'>
-                        <div className='flex flex-col gap-1'>
-                            <label htmlFor="organization">Organization</label>
-                            <input
-                                type="text"
-                                id='organization'
-                                className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
-                                value={formData.jobData.jobOrganization}
-                                onChange={(e) => setFormData({
-                                    ...formData, jobData: { ...formData.jobData, jobOrganization: e.target.value }
-                                })}
-                                required
-                            />
-                        </div>
-
-                        <div className='flex flex-col gap-1'>
-                            <label htmlFor="designation">Designation</label>
-                            <input
-                                type="text"
-                                id='designation'
-                                className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
-                                value={formData.jobData.designation}
-                                onChange={(e) => setFormData({
-                                    ...formData, jobData: { ...formData.jobData, designation: e.target.value }
-                                })}
-                                required
-                            />
-                        </div>
-
-                        <div className='flex gap-1'>
-                            <input
-                                type="checkbox"
-                                id='jobWfh'
-                                onChange={(e) => setFormData({
-                                    ...formData, jobData: { ...formData.jobData, jobWorkFromHome: e.target.checked ? true : false }
-                                })}
-                            />
-                            <label htmlFor="jobWfh" className='text-sm'>Is work from home</label>
-                        </div>
-
-                        <div className='flex gap-3'>
-                            <div className='flex flex-col gap-1'>
-                                <label htmlFor="jobStartYear">Start Year</label>
-                                <input
-                                    type="month"
-                                    id='jobStartYear'
-                                    className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none'
-                                    value={formData.jobData.jobStartYear}
-                                    onChange={(e) => setFormData({
-                                        ...formData, jobData: { ...formData.jobData, jobStartYear: e.target.value }
-                                    })}
-                                    required
-                                />
-                            </div>
-
-                            <div className='flex flex-col gap-1'>
-                                <label htmlFor="jobEndYear">End jobDataYear</label>
-                                <input
-                                    type="month"
-                                    id='jobEndYear'
-                                    className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none'
-                                    value={formData.jobData.jobEndYear}
-                                    onChange={(e) => setFormData({
-                                        ...formData, jobData: { ...formData.jobData, jobEndYear: e.target.value }
-                                    })}
-                                    required
-                                />
-                                <div className='flex gap-1'>
-                                    <input
-                                        type="checkbox"
-                                        id='currentJob'
+                                <div className='flex flex-col gap-1'>
+                                    <label htmlFor="description">Description</label>
+                                    <textarea
+                                        name=""
+                                        id="description"
+                                        rows="4"
+                                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
+                                        value={formData.projectData.description}
                                         onChange={(e) => setFormData({
-                                            ...formData, jobData: { ...formData.jobData, jobCurrentlyWorking: e.target.checked ? true : false }
+                                            ...formData, projectData: { ...formData.projectData, description: e.target.value }
                                         })}
-                                    />
-                                    <label htmlFor="currentJob" className='text-sm'>Currently working here</label>
+                                    ></textarea>
+                                </div>
+
+                                <div className='flex justify-center'>
+                                    <button className='py-2 px-4 shadow rounded-lg bg-gray-200' onClick={addProjectHandler}>Add More</button>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className='flex justify-center'>
-                            <button className='py-2 px-4 shadow rounded-lg bg-gray-200' onClick={addJobHandler}>Add More</button>
-                        </div>
-                    </div>
-                </>
-            )
-            }
-
-            {!showInternContent && (
-                <div className="flex justify-between w-cus-49 mt-4 border rounded-lg p-7">
-                    <h2 className="text-2xl">Internship Details</h2>
-                    <button
-                        className="py-0.5 px-4 hover:bg-gray-200 hover:rounded-lg hover:shadow"
-                        onClick={showIntern}
-                    >
-                        <FontAwesomeIcon icon={faPlus} />
-
-                    </button>
+                        </>
+                    )}
                 </div>
-            )}
-            {showInternContent && (
-                <>
-                    <h2 className='font-bold text-3xl pb-6 pt-8'>Internship details</h2>
-                    <div className='flex flex-col gap-4'>
-                        <div className='flex flex-col gap-1'>
-                            <label htmlFor="internshipOrganization">Organization</label>
-                            <input
-                                type="text"
-                                id='internshipOrganization'
-                                className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
-                                value={formData.internshipData.internshipOrganization}
-                                onChange={(e) => setFormData({
-                                    ...formData, internshipData: { ...formData.internshipData, internshipOrganization: e.target.value }
-                                })}
-                                required
-                            />
+                <div>
+                    {!showJobContent && (
+                        <div className="flex justify-between w-cus-49 mt-4 border rounded-lg p-7 max-[860px]:w-cus-41 max-[720px]:w-cus-37 max-[636px]:w-cus-31 max-[530px]:w-full">
+                            <h2 className="text-2xl">Job Details</h2>
+                            <button
+                                className="py-0.5 px-4 hover:bg-gray-200 hover:rounded-lg hover:shadow"
+                                onClick={showJob}
+                            >
+                                <FontAwesomeIcon icon={faPlus} />
+                            </button>
                         </div>
+                    )}
+                    {showJobContent && (
+                        <>
+                            <h2 className='font-bold text-3xl pb-6 pt-8 text-center'>Job Details</h2>
+                            <div className='flex flex-col gap-4'>
+                                <div className='flex flex-col gap-1'>
+                                    <label htmlFor="organization">Organization</label>
+                                    <input
+                                        type="text"
+                                        id='organization'
+                                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
+                                        value={formData.jobData.jobOrganization}
+                                        onChange={(e) => setFormData({
+                                            ...formData, jobData: { ...formData.jobData, jobOrganization: e.target.value }
+                                        })}
+                                        required
+                                    />
+                                </div>
 
-                        <div className='flex flex-col gap-1'>
-                            <label htmlFor="profile">Profile</label>
-                            <input
-                                type="text"
-                                id='profile'
-                                className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
-                                value={formData.internshipData.profile}
-                                onChange={(e) => setFormData({
-                                    ...formData, internshipData: { ...formData.internshipData, profile: e.target.value }
-                                })}
-                                required
-                            />
-                        </div>
+                                <div className='flex flex-col gap-1'>
+                                    <label htmlFor="designation">Designation</label>
+                                    <input
+                                        type="text"
+                                        id='designation'
+                                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
+                                        value={formData.jobData.designation}
+                                        onChange={(e) => setFormData({
+                                            ...formData, jobData: { ...formData.jobData, designation: e.target.value }
+                                        })}
+                                        required
+                                    />
+                                </div>
 
-                        <div className='flex gap-1'>
-                            <input
-                                type="checkbox"
-                                id='internWfh'
-                                onChange={(e) => setFormData({
-                                    ...formData, internshipData: { ...formData.internshipData, internshipWorkFromHome: e.target.checked ? true : false }
-                                })}
-                            />
-                            <label htmlFor="internWfh" className='text-sm'>Is work from home</label>
-                        </div>
-
-                        <div className='flex gap-3'>
-                            <div className='flex flex-col gap-1'>
-                                <label htmlFor="internshipStartYear">Start Year</label>
-                                <input
-                                    type="month"
-                                    id='internshipStartYear'
-                                    className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none'
-                                    value={formData.internshipData.internshipStartYear}
-                                    onChange={(e) => setFormData({
-                                        ...formData, internshipData: { ...formData.internshipData, internshipStartYear: e.target.value }
-                                    })}
-                                    required
-                                />
-                            </div>
-
-                            <div className='flex flex-col gap-1'>
-                                <label htmlFor="internshipEndYear">End Year</label>
-                                <input
-                                    type="month"
-                                    id='internshipEndYear'
-                                    className='bg-gray-200 w-96 py-2 px-2.5 rounded-lg outline-none'
-                                    value={formData.internshipData.internshipEndYear}
-                                    onChange={(e) => setFormData({
-                                        ...formData, internshipData: { ...formData.internshipData, internshipEndYear: e.target.value }
-                                    })}
-                                    required
-                                />
-                                <div className='flex gap-1'>
+                                {/* <div className='flex gap-1'>
                                     <input
                                         type="checkbox"
-                                        id='currentIntern'
+                                        id='jobWfh'
                                         onChange={(e) => setFormData({
-                                            ...formData, internshipData: { ...formData.internshipData, internCurrentlyWorking: e.target.checked ? true : false }
+                                            ...formData, jobData: { ...formData.jobData, jobWorkFromHome: e.target.checked ? true : false }
                                         })}
                                     />
-                                    <label htmlFor="currentIntern" className='text-sm'>Currently working here</label>
+                                    <label htmlFor="jobWfh" className='text-sm'>Is work from home</label>
+                                </div> */}
+
+                                <div className='flex gap-3 max-[530px]:flex-col'>
+                                    <div className='flex flex-col gap-1'>
+                                        <label htmlFor="jobStartYear">Start Year</label>
+                                        <input
+                                            type="month"
+                                            id='jobStartYear'
+                                            className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
+                                            value={formData.jobData.jobStartYear}
+                                            onChange={(e) => setFormData({
+                                                ...formData, jobData: { ...formData.jobData, jobStartYear: e.target.value }
+                                            })}
+                                            required
+                                        />
+                                    </div>
+
+                                    <div className='flex flex-col gap-1'>
+                                        <label htmlFor="jobEndYear">End jobDataYear</label>
+                                        <input
+                                            type="month"
+                                            id='jobEndYear'
+                                            className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
+                                            value={formData.jobData.jobEndYear}
+                                            onChange={(e) => setFormData({
+                                                ...formData, jobData: { ...formData.jobData, jobEndYear: e.target.value }
+                                            })}
+                                            required
+                                        />
+                                        {/* <div className='flex gap-1'>
+                                            <input
+                                                type="checkbox"
+                                                id='currentJob'
+                                                onChange={(e) => setFormData({
+                                                    ...formData, jobData: { ...formData.jobData, jobCurrentlyWorking: e.target.checked ? true : false }
+                                                })}
+                                            />
+                                            <label htmlFor="currentJob" className='text-sm'>Currently working here</label>
+                                        </div> */}
+                                    </div>
+                                </div>
+
+                                <div className='flex justify-center'>
+                                    <button className='py-2 px-4 shadow rounded-lg bg-gray-200' onClick={addJobHandler}>Add More</button>
                                 </div>
                             </div>
-                        </div>
+                        </>
+                    )}
+                </div>
+                <div>
+                    {!showInternContent && (
+                        <div className="flex justify-between w-cus-49 mt-4 border rounded-lg p-7 max-[860px]:w-cus-41 max-[720px]:w-cus-37 max-[636px]:w-cus-31 max-[530px]:w-full">
+                            <h2 className="text-2xl">Internship Details</h2>
+                            <button
+                                className="py-0.5 px-4 hover:bg-gray-200 hover:rounded-lg hover:shadow"
+                                onClick={showIntern}
+                            >
+                                <FontAwesomeIcon icon={faPlus} />
 
-                        <div className='flex justify-center'>
-                            <button className='py-2 px-4 shadow rounded-lg bg-gray-200'>Add More</button>
+                            </button>
                         </div>
-                    </div>
-                </>
-            )}
+                    )}
+                    {showInternContent && (
+                        <>
+                            <h2 className='font-bold text-3xl pb-6 pt-8 text-center'>Internship details</h2>
+                            <div className='flex flex-col gap-4'>
+                                <div className='flex flex-col gap-1'>
+                                    <label htmlFor="internshipOrganization">Organization</label>
+                                    <input
+                                        type="text"
+                                        id='internshipOrganization'
+                                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
+                                        value={formData.internshipData.internshipOrganization}
+                                        onChange={(e) => setFormData({
+                                            ...formData, internshipData: { ...formData.internshipData, internshipOrganization: e.target.value }
+                                        })}
+                                        required
+                                    />
+                                </div>
 
-            <button type="submit" className='py-2 px-16 shadow rounded-lg bg-black text-white mt-10' onClick={submitHandler}>Generate</button>
+                                <div className='flex flex-col gap-1'>
+                                    <label htmlFor="profile">Profile</label>
+                                    <input
+                                        type="text"
+                                        id='profile'
+                                        className='bg-gray-200 py-2 px-2.5 rounded-lg outline-none'
+                                        value={formData.internshipData.profile}
+                                        onChange={(e) => setFormData({
+                                            ...formData, internshipData: { ...formData.internshipData, profile: e.target.value }
+                                        })}
+                                        required
+                                    />
+                                </div>
+
+                                {/* <div className='flex gap-1'>
+                                    <input
+                                        type="checkbox"
+                                        id='internWfh'
+                                        onChange={(e) => setFormData({
+                                            ...formData, internshipData: { ...formData.internshipData, internshipWorkFromHome: e.target.checked ? true : false }
+                                        })}
+                                    />
+                                    <label htmlFor="internWfh" className='text-sm'>Is work from home</label>
+                                </div> */}
+
+                                <div className='flex gap-3 max-[530px]:flex-col'>
+                                    <div className='flex flex-col gap-1'>
+                                        <label htmlFor="internshipStartYear">Start Year</label>
+                                        <input
+                                            type="month"
+                                            id='internshipStartYear'
+                                            className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
+                                            value={formData.internshipData.internshipStartYear}
+                                            onChange={(e) => setFormData({
+                                                ...formData, internshipData: { ...formData.internshipData, internshipStartYear: e.target.value }
+                                            })}
+                                            required
+                                        />
+                                    </div>
+
+                                    <div className='flex flex-col gap-1'>
+                                        <label htmlFor="internshipEndYear">End Year</label>
+                                        <input
+                                            type="month"
+                                            id='internshipEndYear'
+                                            className='bg-gray-200 w-96 max-[860px]:w-80 max-[720px]:w-72 max-[636px]:w-60 max-[530px]:w-full py-2 px-2.5 rounded-lg outline-none'
+                                            value={formData.internshipData.internshipEndYear}
+                                            onChange={(e) => setFormData({
+                                                ...formData, internshipData: { ...formData.internshipData, internshipEndYear: e.target.value }
+                                            })}
+                                            required
+                                        />
+                                        {/* <div className='flex gap-1'>
+                                            <input
+                                                type="checkbox"
+                                                id='currentIntern'
+                                                onChange={(e) => setFormData({
+                                                    ...formData, internshipData: { ...formData.internshipData, internCurrentlyWorking: e.target.checked ? true : false }
+                                                })}
+                                            />
+                                            <label htmlFor="currentIntern" className='text-sm'>Currently working here</label>
+                                        </div> */}
+                                    </div>
+                                </div>
+
+                                <div className='flex justify-center'>
+                                    <button className='py-2 px-4 shadow rounded-lg bg-gray-200'>Add More</button>
+                                </div>
+                            </div>
+                        </>
+                    )}
+                </div>
+            </div>
+
+            <button type="submit" className='py-2 px-16 shadow rounded-lg bg-black text-white mt-10 max-[530px]:px-10' onClick={submitHandler}>Generate</button>
         </form>
     )
 }

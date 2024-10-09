@@ -20,7 +20,7 @@ function Template() {
     return (
         <div className='flex flex-col items-center py-10 gap-4 bg-white'>
             <div className="w-1/2">
-                <div className='w-full' id='pdf' ref={contentRef}>
+                <div className='h-pdf-70.16 w-pdf-49.6' id='pdf' ref={contentRef}>
                     <div className='py-10 bg-gray-200'>
                         <h1 className='text-4xl text-center font-semibold'> {personalData.firstName} {personalData.lastName} </h1>
                     </div>
@@ -72,7 +72,7 @@ function Template() {
 
                         <div className='w-3/5'>
                             <div className='pb-4'>
-                                <h2 className='text-lg font-medium'>Professional Summary</h2>
+                                <h2 className='text-lg font-medium'>PROFESSIONAL SUMMARY</h2>
                                 <p className='text-sm'>{personalData.summary}</p>
                             </div>
 

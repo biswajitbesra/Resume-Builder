@@ -18,12 +18,14 @@ export default function Button() {
                 <div>
                     <p className='font-bold'>Select Your Template</p>
                 </div>
-                <div className='flex gap-5'>
+                <div className='flex gap-5 mt-3 mb-6'>
                     <div className={`w-56 h-72 border hover:shadow-lg hover:cursor-pointer max-[530px]:h-48 max-[530px]:w-40 max-[390px]:h-40 max-[390px]:w-32 ${selectedComp === 1 ? 'border-slate-800' : ''}`}>
                         <img className='h-full w-full' src={Image1} alt="" onClick={() => setSelectedComp(1)} />
+                        <p className='mt-2'>Template 1</p>
                     </div>
                     <div className={`w-56 h-72 border hover:shadow-lg hover:cursor-pointer max-[530px]:h-48 max-[530px]:w-40 max-[390px]:h-40 max-[390px]:w-32 ${selectedComp === 2 ? 'border-slate-800' : ''}`}>
                         <img className='h-full w-full' src={Image2} alt="" onClick={() => setSelectedComp(2)} />
+                        <p className='mt-2'>Template 2</p>
                     </div>
                 </div>
                 <div className="flex justify-center items-center">

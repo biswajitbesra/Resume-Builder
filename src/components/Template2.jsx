@@ -19,7 +19,7 @@ const Template2 = () => {
 
     return (
         <div className='flex flex-col items-center py-10 gap-4'>
-            <div className="max-w-5xl mx-auto h-cus-70 bg-white shadow-lg rounded-lg" ref={contentRef}>
+            <div className="h-pdf-70.16 w-pdf-49.6 mx-auto max-[860px]:h-pdf-68.16 max-[860px]:w-pdf-47.6 bg-white shadow-lg rounded-lg" ref={contentRef}>
                 <div className="flex items-start h-full">
                     <div className="w-1/3 bg-gray-100 h-full p-4 rounded-l-lg">
                         <div className="flex justify-center mb-6">
@@ -37,11 +37,11 @@ const Template2 = () => {
                                 Contact
                             </h2>
                             <ul className="text-gray-700 space-y-2">
-                                <li>📞 {personalData.phoneNo}</li>
-                                <li>✉️ {personalData.emailId}</li>
-                                <li>🌐 {personalData.linkedIn}</li>
-                                <li>🌐 {personalData.gitHub}</li>
-                                <li>📍 {personalData.address}</li>
+                                <li className='text-sm'>📞 {personalData.phoneNo}</li>
+                                <li className='text-sm'>✉️ {personalData.emailId}</li>
+                                <li className='text-sm'>🌐 {personalData.linkedIn}</li>
+                                <li className='text-sm'>🌐 {personalData.gitHub}</li>
+                                <li className='text-sm'>📍 {personalData.address}</li>
                             </ul>
                         </div>
 
@@ -49,10 +49,10 @@ const Template2 = () => {
                             <h2 className="text-lg font-bold bg-gray-800 text-white py-2 px-4 mb-4">
                                 Skills
                             </h2>
-                            <ul className="space-y-2">
+                            <ul className="space-y-1">
                                 {Object.values(personalData.skills).map(
                                     (skills, index) => (
-                                        <li className="flex items-center" key={index}>
+                                        <li className="flex items-center text-sm" key={index}>
                                             {skills}
                                         </li>
                                     )
@@ -63,10 +63,10 @@ const Template2 = () => {
                             <h2 className="text-lg font-bold bg-gray-800 text-white py-2 px-4 mb-4">
                                 Languages known
                             </h2>
-                            <ul className="space-y-2">
+                            <ul className="space-y-1">
                                 {Object.values(personalData.language).map(
                                     (lang, index) => (
-                                        <li className="flex items-center" key={index}>
+                                        <li className="flex items-center text-sm" key={index}>
                                             {lang}
                                         </li>
                                     )
@@ -77,7 +77,7 @@ const Template2 = () => {
                         <div>
                             <h2 className='text-lg font-bold bg-gray-800 text-white py-2 px-4 mb-4'>HOBBIES</h2>
                             {personalData.hobbies.map((hobby, index) => (
-                                <p key={index}>{hobby}</p>
+                                <p className='text-sm' key={index}>{hobby}</p>
                             ))}
                         </div>
                     </div>
@@ -97,17 +97,17 @@ const Template2 = () => {
                             <h2 className="text-lg font-bold bg-gray-800 text-white py-2 px-4 mb-4">
                                 Education
                             </h2>
-                            {educationalData.map(
-                                (data, index) => (
-                                    <ul className="space-y-4 text-gray-700" key={index}>
-                                        <li>
+                            <ul className="space-y-2 text-gray-700">
+                                {educationalData.map(
+                                    (data, index) => (
+                                        <li key={index}>
                                             <p className="font-semibold">{data.course}</p>
-                                            <p>{data.college}</p>
-                                            <p>{data.qualificationStartYear} - {data.qualificationEndYear}</p>
+                                            <p className='text-sm'>{data.college}</p>
+                                            <p className='text-sm'>{data.qualificationStartYear} - {data.qualificationEndYear}</p>
                                         </li>
-                                    </ul>
-                                )
-                            )}
+                                    )
+                                )}
+                            </ul>
                         </div>
 
                         <div className="mb-6">
@@ -118,17 +118,17 @@ const Template2 = () => {
                             {jobData.some(data => data.jobOrganization) || internshipData.some(data => data.internshipOrganization) ? (
                                 <div>
                                     {jobData.some(data => data.jobOrganization) && (
-                                        <div>
+                                        <ul className=' space-y-1.5'>
                                             {jobData.map(
                                                 (data, index) => (
-                                                    <div className='mb-1' key={index}>
+                                                    <li className='mb-1' key={index}>
                                                         <h3 className='text-lg font-semibold'>{data.designation}</h3>
-                                                        <p>{data.jobOrganization}</p>
-                                                        <p>{data.jobStartYear} - {data.jobEndYear}</p>
-                                                    </div>
+                                                        <p className='text-sm'>{data.jobOrganization}</p>
+                                                        <p className='text-sm'>{data.jobStartYear} - {data.jobEndYear}</p>
+                                                    </li>
                                                 )
                                             )}
-                                        </div>
+                                        </ul>
                                     )}
 
                                     {internshipData.some(data => data.internshipOrganization) && (
@@ -137,8 +137,8 @@ const Template2 = () => {
                                                 (data, index) => (
                                                     <div className='mb-1' key={index}>
                                                         <h3 className='text-lg font-semibold'>{data.profile} (Intern)</h3>
-                                                        <p>{data.internshipOrganization}</p>
-                                                        <p>{data.internshipStartYear} - {data.internshipEndYear}</p>
+                                                        <p className='text-sm'>{data.internshipOrganization}</p>
+                                                        <p className='text-sm'>{data.internshipStartYear} - {data.internshipEndYear}</p>
                                                     </div>
                                                 )
                                             )}
@@ -153,17 +153,17 @@ const Template2 = () => {
                                 Projects
                             </h2>
                             {projectData.some(data => data.title || data.description || data.link) && (
-                                <div className='pb-4'>
+                                <ul className='pb-4 space-y-2'>
                                     {projectData.map(
                                         (data, index) => (
-                                            <div className='mb-1' key={index}>
-                                                <p className='text-sm font-semibold'>{data.title}</p>
+                                            <li className='mb-1 space-y-1.5' key={index}>
+                                                <p className='font-semibold'>{data.title}</p>
                                                 <p className='text-sm'>{data.description}</p>
-                                                <a className='text-sm' href={data.link}>{data.link}</a>
-                                            </div>
+                                                <a className='text-sm font-semibold' href={data.link}>{data.link}</a>
+                                            </li>
                                         )
                                     )}
-                                </div>
+                                </ul>
                             )}
                         </div>
                     </div>
